@@ -29,3 +29,8 @@ services:
     volumes:
       - ${CACHE_ROOT}/cache:/data/cache
       - ${CACHE_ROOT}/logs:/data/logs
+
+networks:
+  network1:
+    name: newNet
+    external: true
