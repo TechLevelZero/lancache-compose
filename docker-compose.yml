@@ -3,6 +3,8 @@ x-restart-policy: &restart-policy "no"
 services:
   dns:
     image: lancachenet/lancache-dns:latest
+    networks: 
+      - network1
     env_file: .env
     restart: *restart-policy
     ports:
@@ -21,6 +23,8 @@ services:
 
   monolithic:
     image: lancachenet/monolithic:latest
+    networks:
+      - network1
     env_file: .env
     restart: *restart-policy
     ports:
